@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyberdojo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      color: #00ffcc;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #222;
+      padding: 12px;
+    }
+
+    nav a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      display: none;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #00ffcc33;
+      margin-bottom: 30px;
+    }
+
+    h2, h3 {
+      color: #00ffcc;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #00ffcc;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .result {
+      margin-top: 10px;
+      color: #0f0;
+    }
+
+    .key-term {
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      text-align: center;
+      padding: 15px;
+      color: #888;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      background-color: #222;
+      border: 1px solid #444;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+        .alert{
+            color: #00ffcc;
+    }
+  </style>
+</head>
+<body>
+  <header>🛡️ CyberDojo 🧠</header>
+
+  <nav>
+    <a href="#" onclick="showPage('accueil')">Accueil</a>
+    <a href="#" onclick="showPage('cours')">Cours</a>
+    <a href="#" onclick="showPage('exercices')">Exercices</a>
+    <a href="#" onclick="showPage('evaluation')">Évaluation</a>
+    <a href="#" onclick="showPage('explications')">Explications</a>
+  </nav>
+
+  <div id="accueil" class="page active">
+    <div class="card">
+      <h2>Bienvenue sur CyberSec Apprentissage</h2>
+      <p>
+        Ce site est une plateforme éducative dédiée à l'apprentissage de la cybersécurité. Il a pour but de fournir des ressources claires et accessibles pour les débutants souhaitant se former aux bases de la sécurité informatique.
+      </p>
+      <ul>
+        <li>📚 Des cours détaillés pour comprendre les fondements de la cybersécurité.</li>
+        <li>💡 Des explications simples sur des concepts complexes.</li>
+        <li>🧪 Des exercices de simulation pour mettre en pratique vos connaissances.</li>
+        <li>🧠 Des quiz interactifs pour tester votre compréhension.</li>
+        <li>📝 Une évaluation finale pour valider vos acquis.</li>
+      </ul>
+      <br>
+      <p>⚠️ Avertissement : Toutes les informations fournies sur ce site ont un but exclusivement éducatif et préventif. Tout usage illégal ou malveillant de ces connaissances relève de la seule responsabilité de l'utilisateur. L'auteur du site décline toute responsabilité quant aux actes commis à partir des contenus présentés.</p>
+    </div>
+  </div>
+
+  <div id="cours" class="page">
+    <div class="card">
+      <h2>📘 Cours : Bases Fondamentales</h2>
+      <h3>1. Qu'est-ce que la cybersécurité ?</h3>
+      <p>La <span class="key-term">cybersécurité</span> est l'ensemble des techniques et des pratiques conçues pour protéger les systèmes informatiques, les réseaux et les données contre les attaques, les dommages ou les accès non autorisés.</p>
+      <h3>2. Types de menaces</h3>
+      <ul>
+        <li><span class="key-term">Malwares</span> : logiciels malveillants comme les virus, chevaux de Troie, ransomwares.</li>
+        <li><span class="key-term">Phishing</span> : tentative d'obtenir des informations sensibles en se faisant passer pour une entité de confiance.</li>
+        <li><span class="key-term">Attaques DDoS</span> : surcharge d'un serveur pour le rendre inaccessible.</li>
+      </ul>
+      <h3>3. Bonnes pratiques</h3>
+      <ul>
+        <li>Utiliser des mots de passe forts et uniques.</li>
+        <li>Mettre à jour régulièrement ses logiciels.</li>
+        <li>Ne pas cliquer sur des liens suspects.</li>
+        <li>Utiliser un antivirus et un pare-feu.</li>
+      </ul>
+      <H3>4. Comment bien se proteger ?</H3>
+      <ul>
+        <li>Commencer par entrer le moin d'informatipn sur internet. Pas meme votre prenom.</li>
+        <li>N'ouvrez jamais de lien, les liens ou les telechargement sont les plus grosse erreur des victime. si vous n'en n'ouvrez casiment pas, vous ne serez casiment jamais hacker</li>
+        <li>N'allez pas n'importe ou. Des site parfoit normal cache en verite des code malveillant</li>
+        <li>Suivre notre discord et nos site. Nous partageons tous les jours sur le discord des tutos de plein de chose dans le domaine informatique (lien dans "explications")</li>
+      </ul>
+      <h3>5. Comment concraitement attaquer quelqu'un ou quelque chose ?</h3>
+      <ul>
+        <li>commencer par trouver son maillont faible. (exemple : un site malcoder, regarder le code source pour essayer de trouver une faille.)</li>
+        <li>Pour attaquer quelqu'un car le maillont faible est toujours l'humain, il y a des site opensource mais a eviter a but malveillant.</li>
+        <li>l'Osint, l'Osint est une technique qui permet que avec un pseudo comme son insta, vous pouvez trouver plein d'autre compte qui lui appartient. (tuto dans le serveur discord ou bientot disponible sur le site)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="exercices" class="page">
+    <div class="card">
+      <h2>🔧 Exercices pratiques</h2>
+      <div id="boite" style="background:#222;padding:20px;border-radius:10px;">
+        <p><strong>Boîte de connexion :</strong></p>
+        <br>
+        <p>Trouver le cide de connection : </p>
+        <input type="text" placeholder="Identifiant" id="idBox"><br><br>
+        <input type="password" placeholder="Mot de passe" id="mdpBox"><br><br>
+        <button onclick="verifHack()">Entrer</button>
+        <p id="hackMessage"></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="evaluation" class="page">
+    <div class="card">
+      <h2>📋 Évaluation Finale</h2>
+      <p>20 questions tirées aléatoirement pour tester l'ensemble de vos connaissances.</p>
+      <p id="alert">(Évaluation généralement réservée aux niveaux légèrement expérimentés.)</p>
+      <div id="questionsContainer"></div>
+      <button onclick="soumettreEvaluation()">Soumettre</button>
+      <div id="noteFinale"></div>
+    </div>
+  </div>
+
+  <div id="explications" class="page">
+    <div class="card">
+      <h2>📖 Explications</h2>
+      <h4>qu'est ce que le hacking ?</h4>
+      <br>
+      <br>
+    <p>le hacking est un mot anglais qui veut dire "piratage informatique" et cela consiste a pirater un systeme ou un site ou une personne ou autre a but bienveillant ou malveillant </p>
+    <br>
+    <h4>Pourquoi des pirates malveillants existent-ils ?</h4>
+    <br>
+    <br>
+    <p>Les pirates informatique sont malveillant pour plusieurs chose comme : vengeance, argent ou juste pour le flex</p>
+    <br>
+    <h1>Explications du site :</h1>
+    <br>
+    <br>
+    <p>Ce site est un grand projet soutenu par l'entreprise NEXUS. Il s'agit d'une plateforme d'apprentissage dédiée à l'informatique, couvrant des domaines variés tels que le piratage éthique, le développement web, l'intelligence artificielle, ou encore le fonctionnement des systèmes informatiques, avec des explications sur le binaire, les composants, etc...
+    </p>
+    <br>
+    <p>Pour l'instant, vous pouvez avoir quelque truc a apprendre sur le hacking, mais bientot des mise a jour aurons lieu et vous pourez apprendre plus encore avec plaisirs
+        
+    </p>
+    <p>Nous avons un serveur discord sur l'entreprise NEXUS, mais aussi directement un serveur pour le site "Cyberdojo"</p>
+    <br>
+    <a>lien des 2 serveur si dessous : </a>
+    <br>
+    <a href="https://discord.gg/km6WThgH" target="_blank">Rejoins notre serveur Discord de l'entreprise "NEXUS"</a>
+    <br>
+    <a href="https://discord.gg/yBgPJ2Dq" target="_blank">Rejoins notre serveur Discord de la commu "Cyberdojo"</a>
+
+
+
+</div>
+  </div>
+
+  <footer>
+    &copy; 2025 Cyberdojo.com - Tous droits réservés. dev par "focus903" (pseudo discord)
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+      if (pageId === 'evaluation') genererQuestions();
+    }
+
+    function verifHack() {
+      const id = document.getElementById("idBox").value;
+      const mdp = document.getElementById("mdpBox").value;
+      if (id === "admin" && mdp === "root123") {
+        document.getElementById("hackMessage").innerHTML = "✅ Accès autorisé !";
+      } else {
+        document.getElementById("hackMessage").innerHTML = "❌ Accès refusé.";
+      }
+    }
+
+    function genererQuestions() {
+      const container = document.getElementById("questionsContainer");
+      container.innerHTML = "";
+      const questions = [...banqueQuestions].sort(() => 0.5 - Math.random()).slice(0, 20);
+      questions.forEach((q, i) => {
+        const block = document.createElement("div");
+        block.innerHTML = `<p><strong>${i + 1}. ${q}</strong></p><textarea rows="2"></textarea>`;
+        container.appendChild(block);
+      });
+    }
+
+    function soumettreEvaluation() {
+      const responses = document.querySelectorAll('#questionsContainer textarea');
+      let score = 0;
+      responses.forEach(r => {
+        if (r.value.trim().length > 10) score++;
+      });
+      document.getElementById("noteFinale").innerText = `Ta note finale est : ${score}/20.`;
+    }
+
+    const banqueQuestions = [
+      "Que signifie le terme 'phishing' ?",
+      "Quel est le rôle d'un pare-feu ?",
+      "Qu'est-ce qu'un malware ?",
+      "Pourquoi faut-il mettre à jour ses logiciels ?",
+      "Que signifie HTTPS ?",
+      "Donne un exemple de mot de passe fort.",
+      "Cite un risque des réseaux Wi-Fi publics.",
+      "Qu'est-ce qu'un ransomware ?",
+      "Comment reconnaître un mail de phishing ?",
+      "Que faire en cas de suspicion de piratage ?",
+      "Pourquoi utiliser une double authentification ?",
+      "Quels sont les dangers du téléchargement illégal ?",
+      "Différence entre virus et ver informatique ?",
+      "Qu’est-ce qu’un cheval de Troie ?",
+      "Pourquoi faire des sauvegardes régulières ?",
+      "Que signifie VPN ?",
+      "Quel est le rôle d’un antivirus ?",
+      "Comment protéger son smartphone ?",
+      "Pourquoi éviter les liens inconnus ?",
+      "Que faire si ton mot de passe a été compromis ?"
+    ];
+  </script>
+                               <!-- (¯`·.¸¸.·´¯)       (¯`·.¸¸.->  
+                                  (   ░░ Dev ░░ )     by Focus ツ   
+                                   (_.·´¸¸.·´¯)       (_.·´¯¯`·.)-->
+</body>
+</html>
